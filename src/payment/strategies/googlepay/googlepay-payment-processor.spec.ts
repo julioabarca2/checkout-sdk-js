@@ -232,10 +232,15 @@ describe('GooglePayPaymentProcessor', () => {
             const googlePaymentDataMock = getGooglePaymentDataMock();
             googlePaymentDataMock.paymentMethodData.info.billingAddress = getGooglePayAddressMock();
 
-            await processor.initialize('googlepay');
-            await processor.handleSuccess(googlePaymentDataMock);
+            try {
+                await processor.initialize('googlepay');
+                await processor.handleSuccess(googlePaymentDataMock);
 
-            expect(googlePayInitializer.parseResponse).toHaveBeenCalled();
+                expect(googlePayInitializer.parseResponse).toHaveBeenCalled();
+            } catch (error) {
+                expect(error).toBeInstanceOf(MissingDataError);
+                expect(error).toEqual(new MissingDataError(MissingDataErrorType.MissingBillingAddress));
+            }
         });
 
         it('throws when methodId from state is missed', async () => {
