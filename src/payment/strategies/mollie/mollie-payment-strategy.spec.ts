@@ -149,7 +149,7 @@ describe('MolliePaymentStrategy', () => {
                                 language: 'en-US',
                                 screen_height: 0,
                                 screen_width: 0,
-                                time_zone_offset: '0',
+                                time_zone_offset: new Date().getTimezoneOffset().toString(),
                             },
                             credit_card_token : {
                                 token: 'tkn_test',
