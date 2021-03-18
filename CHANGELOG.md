@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.134.2-alpha.51d4308b48fd39340a40cebe6714c991efb969be](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.134.1...v1.134.2-alpha.51d4308b48fd39340a40cebe6714c991efb969be) (2021-03-18)
+
+
+### Bug Fixes
+
+* **checkout:** INT-3571 Google Pay [StripeV3] - Billing address is missing ([51d4308](https://github.com/bigcommerce/checkout-sdk-js/commit/51d4308b48fd39340a40cebe6714c991efb969be))
+
 ### [1.134.1](https://github.com/bigcommerce/checkout-sdk-js/compare/v1.134.0...v1.134.1) (2021-03-16)
 
 
